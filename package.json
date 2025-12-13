@@ -1,0 +1,7 @@
+{
+  "name": "cerine-benharzallah",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "mkdir -p public && cp index.html robots.txt sitemap.xml test.html style.css main.js public/ && cp -r assets public/ && if [ -f _redirects ]; then cp _redirects public/; fi && if [ -f _headers ]; then cp _headers public/; fi"
+  }
+}
