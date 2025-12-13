@@ -1,0 +1,367 @@
+body {
+  margin: 0 auto;
+  padding-top: 250px; /*à adapter en hauteur pour maintenir la 1ère section juste en dessous de la navbar*/
+  background-color: #fafafa;
+  color: #3b3b3b;
+  font-family: "Montserrat", sans-serif;
+  max-width: 1200px;
+}
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fafafa;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* empile logo au dessus navbar */
+  align-items: center;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px; /* espace entre logo et texte */
+  margin-top: 10px;
+}
+
+.logo {
+  text-align: center;
+  padding: 0;
+}
+.logo img {
+  max-height: 200px;
+  width: 100%;
+  height: auto; /* garde les proportions */
+}
+
+.header-letter {
+  text-align: center;
+  padding: 0px;
+  max-width: 900px;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.p-header-letter {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.header-name {
+  font-weight: 600;
+}
+
+/* Navbar */
+
+nav {
+  background-color: #c2e0e2;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #3b3b3b;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #fafafa;
+  color: #3b3b3b;
+  border-radius: 15px;
+  padding: 2px;
+}
+
+/* Sections */
+
+section {
+  max-width: 1200px;
+  padding: 20px 20px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  scroll-margin-top: 250px; /*à adapter en hauteur pour maintenir la 1ère section juste en dessous de la navbar*/
+}
+
+section:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+section h2 {
+  font-size: 20px; /* même que h1 avant */
+  text-align: center;
+  color: #3b3b3b;
+  margin-bottom: 1rem; /* espace sous le titre */
+}
+
+.italic-letter {
+  font-style: italic;
+  font-size: 26px; /* reste identique */
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* pour responsivité */
+}
+
+.section-content .text {
+  flex: 1 1 50%;
+}
+
+.section-content .image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.section-content .image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+.section-content .image img.img-small {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+h1 {
+  font-size: 20px;
+}
+h1,
+h2 {
+  text-align: center;
+  color: #3b3b3b;
+}
+
+p {
+  text-align: center;
+  font-size: 16px;
+  color: #3b3b3b;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+a {
+  outline: none;
+}
+
+a:focus {
+  color: #3b3b3b;
+  font-weight: bold;
+}
+
+.burger {
+  display: none;
+}
+.italic-letter {
+  font-style: italic;
+  font-size: 26px;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.mirror-image {
+  transform: scaleX(-1);
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.doctolib-logo {
+  height: 35px;
+  width: auto;
+}
+
+.doctolib-logo:hover {
+  height: 40px;
+  width: auto;
+}
+
+.text-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* reste responsive */
+}
+
+.text-image-wrapper .text {
+  flex: 1 1 55%; /* prend un peu plus de place que l'image */
+}
+
+.text-image-wrapper .image {
+  flex: 1 1 40%; /* ajuste largeur image */
+  text-align: center;
+}
+
+.text-image-wrapper .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.instagram-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.instagram-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+ion-icon {
+  padding: 0.5rem;
+  color: #3b3b3b;
+  font-size: 35px;
+  cursor: pointer;
+}
+ion-icon:hover {
+  background-color: #c2e0e2;
+  border-radius: 50%;
+}
+
+.faq-answer {
+  display: none; /* caché par défaut */
+  margin-top: 5px;
+  color: #3b3b3b;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.faq-question {
+  cursor: pointer;
+  text-align: center;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 10px 0;
+  line-height: inherit;
+  display: block;
+}
+
+.faq-question:hover {
+  font-weight: 600;
+}
+
+footer address {
+  font-style: normal; /* retire l’italique */
+  text-align: center; /* si tu veux centrer */
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+/* Media Queries pour la responsivité */
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 180px;
+  }
+  .fixed-header .logo img {
+    max-height: 130px;
+    width: auto;
+  }
+
+  .header-top {
+    gap: 10px; /* réduit l'espace entre logo et texte sur mobile */
+    flex-direction: row; /* optionnel : si tu veux que le texte passe sous le logo */
+    align-items: center;
+  }
+  .section-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-content .text,
+  .section-content .image {
+    flex: 1 1 100%;
+  }
+
+  .section-content .image img {
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  nav {
+    padding: 2px 0; /* Réduit la hauteur totale de la barre */
+  }
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+  nav ul {
+    display: none;
+    padding: 0;
+  }
+  nav ul.active {
+    display: block;
+  }
+  .burger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px 15px;
+    color: #4a4a4a;
+    user-select: none;
+  }
+  section {
+    scroll-margin-top: 180px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+  .italic-letter {
+    font-size: 20px;
+  }
+  .header-letter {
+    font-size: 20px;
+  }
+  .header-name {
+    font-size: 20px;
+  }
+
+  .p-header-letter {
+    font-size: 14px;
+  }
+
+  .icon-container {
+    flex-direction: row; /* reste en ligne */
+    flex-wrap: wrap; /* passe à la ligne si besoin */
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  ion-icon {
+    font-size: 28px;
+    padding: 0.4rem;
+  }
+}
