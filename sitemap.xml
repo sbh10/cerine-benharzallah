@@ -6,4 +6,16 @@
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
+      <url>
+      <loc>https://www.cerine-benharzallah.fr/mentions-legales.html</loc>
+      <lastmod>2024-12-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.3</priority>
+   </url>
+   <url>
+      <loc>https://www.cerine-benharzallah.fr/cgv.html</loc>
+      <lastmod>2024-12-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.3</priority>
+   </url>
 </urlset>

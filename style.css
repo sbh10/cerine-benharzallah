@@ -1,3 +1,6 @@
+/* ============================= */
+/* BASE */
+/* ============================= */
 body {
   margin: 0 auto;
   padding-top: 250px; /*à adapter en hauteur pour maintenir la 1ère section juste en dessous de la navbar*/
@@ -6,6 +9,11 @@ body {
   font-family: "Montserrat", sans-serif;
   max-width: 1200px;
 }
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
 .fixed-header {
   position: fixed;
   top: 0;
@@ -54,7 +62,9 @@ body {
   font-weight: 600;
 }
 
-/* Navbar */
+/* ============================= */
+/* NAV */
+/* ============================= */
 
 nav {
   background-color: #c2e0e2;
@@ -90,7 +100,9 @@ nav ul li a:hover {
   padding: 2px;
 }
 
-/* Sections */
+/* ============================= */
+/* SECTIONS */
+/* ============================= */
 
 section {
   max-width: 1200px;
@@ -105,16 +117,7 @@ section:nth-child(odd) {
 }
 
 section h2 {
-  font-size: 20px; /* même que h1 avant */
-  text-align: center;
-  color: #3b3b3b;
   margin-bottom: 1rem; /* espace sous le titre */
-}
-
-.italic-letter {
-  font-style: italic;
-  font-size: 26px; /* reste identique */
-  font-family: "Merriweather Sans", sans-serif;
 }
 
 .section-content {
@@ -144,17 +147,19 @@ section h2 {
   height: auto;
   border-radius: 8px;
 }
-h1 {
-  font-size: 20px;
-}
 h1,
 h2 {
+  font-size: 20px;
   text-align: center;
   color: #3b3b3b;
 }
 
+/* ============================= */
+/* TEXTE */
+/* ============================= */
+
 p {
-  text-align: center;
+  text-align: justify;
   font-size: 16px;
   color: #3b3b3b;
   max-width: 800px;
@@ -178,6 +183,14 @@ a:focus {
   font-size: 26px;
   font-family: "Merriweather Sans", sans-serif;
 }
+
+.bold-letter {
+  font-weight: bold;
+}
+
+/* ============================= */
+/* LOGOS ET IMAGES */
+/* ============================= */
 
 .mirror-image {
   transform: scaleX(-1);
@@ -238,12 +251,15 @@ ion-icon {
   color: #3b3b3b;
   font-size: 35px;
   cursor: pointer;
-}
-ion-icon:hover {
   background-color: #c2e0e2;
   border-radius: 50%;
 }
-
+ion-icon:hover {
+  font-size: 38px;
+}
+/* ============================= */
+/* FAQ */
+/* ============================= */
 .faq-answer {
   display: none; /* caché par défaut */
   margin-top: 5px;
@@ -255,7 +271,7 @@ ion-icon:hover {
 .faq-question {
   cursor: pointer;
   text-align: center;
-  font-size: inherit;
+  font-size: 16px;
   font-weight: inherit;
   margin: 10px 0;
   line-height: inherit;
@@ -265,21 +281,96 @@ ion-icon:hover {
 .faq-question:hover {
   font-weight: 600;
 }
-
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+.footer-txt {
+  text-align: center;
+  font-size: 12px;
+}
 footer address {
   font-style: normal; /* retire l’italique */
   text-align: center; /* si tu veux centrer */
   margin-bottom: 20px;
   font-size: 12px;
 }
-/* Media Queries pour la responsivité */
+/* ============================= */
+/* CSS OTHER PAGE*/
+/* ============================= */
+.body-other-page {
+  margin: 0 auto; /* Centre le body */
+  padding: 10px;
+  padding-top: 20px;
+  background-color: #fafafa;
+  color: #3b3b3b;
+  font-family: "Montserrat", sans-serif;
+  max-width: 1200px;
+}
+
+.nav-other-page {
+  padding: 15px 0;
+  max-width: 1200px;
+}
+.nav-other-page-text {
+  color: #3b3b3b;
+  background-color: #fafafa;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+  margin: 10px;
+  border-radius: 15px;
+  padding: 3px;
+}
+.nav-other-page-text:hover {
+  padding: 2px;
+  border-radius: 0px;
+}
+.mentions-legales-text,
+.politique-confidentialite-text {
+  max-width: 1200px;
+  margin: 0 auto; /* Centre le conteneur */
+  padding: 20px 10px;
+}
+
+.mentions-legales-text h1,
+.politique-confidentialite-text h1 {
+  font-style: italic;
+}
+.mentions-legales-text h1,
+.politique-confidentialite-text h1,
+.mentions-legales-text h2,
+.politique-confidentialite-text h2 {
+  text-align: left;
+  font-size: 16px;
+  max-width: 100%;
+}
+
+.mentions-legales-text h3,
+.politique-confidentialite-text h3 {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  max-width: 100%;
+}
+
+.mentions-legales-text p,
+.politique-confidentialite-text p {
+  line-height: 1.5;
+  margin: 0;
+  text-align: justify;
+  max-width: 100%;
+  font-size: 14px;
+}
+/* ============================= */
+/* MEDIA QUERY */
+/* ============================= */
 
 @media (max-width: 768px) {
   body {
-    padding-top: 180px;
+    padding-top: 140px;
   }
   .fixed-header .logo img {
-    max-height: 130px;
+    max-height: 100px;
     width: auto;
   }
 
@@ -287,6 +378,14 @@ footer address {
     gap: 10px; /* réduit l'espace entre logo et texte sur mobile */
     flex-direction: row; /* optionnel : si tu veux que le texte passe sous le logo */
     align-items: center;
+    margin-top: 5px;
+  }
+  .header-letter {
+    font-size: 14px; /* Réduit la taille du texte */
+  }
+
+  .p-header-letter {
+    font-size: 13px; /* Réduit la taille du texte */
   }
   .section-content {
     flex-direction: column;
@@ -305,11 +404,14 @@ footer address {
   }
 
   nav {
-    padding: 2px 0; /* Réduit la hauteur totale de la barre */
+    padding: 1px 0; /* Réduit la hauteur totale de la barre */
   }
   nav ul li {
     display: block;
-    margin: 5px 0;
+    margin: 3px 0;
+  }
+  nav ul li a {
+    font-size: 13px;
   }
   nav ul {
     display: none;
@@ -322,33 +424,29 @@ footer address {
     display: block;
     font-size: 30px;
     cursor: pointer;
-    padding: 5px 15px;
+    padding: 1.5px 15px;
     color: #4a4a4a;
     user-select: none;
   }
   section {
-    scroll-margin-top: 180px;
+    scroll-margin-top: 140px;
   }
 
-  h1 {
-    font-size: 18px;
-  }
-
-  p {
+  h1,
+  h2 {
     font-size: 16px;
   }
-  .italic-letter {
-    font-size: 20px;
-  }
-  .header-letter {
-    font-size: 20px;
-  }
-  .header-name {
-    font-size: 20px;
+
+  p,
+  .faq-question {
+    font-size: 14px;
   }
 
+  .italic-letter,
+  .header-letter,
+  .header-name,
   .p-header-letter {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .icon-container {
@@ -363,5 +461,57 @@ footer address {
   ion-icon {
     font-size: 28px;
     padding: 0.4rem;
+  }
+  .doctolib-logo {
+    height: 28px;
+    width: auto;
+  }
+}
+
+@media (max-width: 1024px) and (max-height: 600px) and (orientation: landscape) {
+  body {
+    padding-top: 90px;
+  }
+  .fixed-header {
+    padding-bottom: 0;
+  }
+
+  .fixed-header .logo {
+    display: none;
+  }
+  .header-top {
+    gap: 0;
+    margin-top: 25px; /* Supprime complètement la marge top */
+    margin-bottom: 20px; /* Supprime la marge bottom */
+  }
+
+  .header-letter {
+    font-size: 13px; /* Réduit encore plus la taille */
+    padding: 0; /* Supprime le padding */
+    margin: 0 0 10px 0; /* Très petit espace en bas */
+    line-height: 1; /* Interligne minimal */
+  }
+
+  .p-header-letter {
+    font-size: 13px;
+    margin: 0; /* Supprime les marges */
+    line-height: 1; /* Interligne minimal */
+  }
+
+  nav {
+    padding: 3px 0; /* Réduit la hauteur de la nav */
+  }
+  section {
+    scroll-margin-top: 80px;
+  }
+
+  h1,
+  h2 {
+    font-size: 16px;
+  }
+
+  p,
+  .faq-question {
+    font-size: 14px;
   }
 }
